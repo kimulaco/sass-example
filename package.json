@@ -6,11 +6,11 @@
   "private": true,
   "scripts": {
     "build": "npm-run-all -p build:*",
-    "build:dart": "sass --no-source-map src/scss/main.scss dist/css/dart/main.css",
-    "build:node": "node-sass --no-source-map src/scss/main.scss dist/css/node/main.css",
+    "build:dart": "sass src/scss:dist/css/dart --no-source-map",
+    "build:node": "node-sass src/scss -o dist/css/node --no-source-map",
     "watch": "npm-run-all -p watch:*",
-    "watch:dart": "sass --no-source-map -w src/scss/main.scss dist/css/dart/main.css",
-    "watch:node": "node-sass --no-source-map -w src/scss/main.scss dist/css/node/main.css",
+    "watch:dart": "sass src/scss:dist/css/dart -w --no-source-map",
+    "watch:node": "node-sass src/scss -o dist/css/node -w --no-source-map",
     "lint": "stylelint src/**/**.scss"
   },
   "devDependencies": {
