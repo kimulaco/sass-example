@@ -1,0 +1,5 @@
+@use "font" as font;
+
+.button {
+  font-family: font.$font-family-default;
+}
